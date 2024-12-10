@@ -1,0 +1,347 @@
+  /* Resetando estilos padrão */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Corpo da página */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  /* Navbar fixa no topo */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #d32f2f;
+    padding: 10px 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .navbar li {
+    margin: 0 20px;
+  }
+
+  .navbar a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .navbar a:hover {
+    color: #f9f9f9;
+  }
+
+  /* Seções principais */
+  section {
+    padding: 80px 20px;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  /* Home Section */
+  #home {
+    background: #fff;
+    text-align: center;
+  }
+
+  #home h1 {
+    font-size: 3em;
+    color: #d32f2f;
+  }
+
+  #home p {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+
+  .app-icon {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+  }
+
+  /* Gallery Section */
+  .gallery {
+    background-color: #f1f1f1;
+  }
+
+  .gallery .container h2 {
+    font-size: 2.5em;
+    color: #d32f2f;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .gallery .container p{
+    font-size: 1.1em;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .gallery .image-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .thumbnail {
+    width: 15%;
+    transition: width 0.3s;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .thumbnail:hover {
+    width: 25%;
+  }
+
+  .thumbnail.active {
+    width: 25%;
+  }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  /* About Section */
+  #about h2, #features h2, #privacy h2, #donate h2 {
+    font-size: 2.5em;
+    color: #d32f2f;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #about p, #features ul, #privacy p, #donate p {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  /* Lista de funcionalidades */
+  #features ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  #features ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  #features .container p{
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* Button - Doação */
+  button {
+    background-color: #d32f2f;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  button:hover {
+    background-color: #c2185b;
+  }
+
+  #donate h3{
+  color: #00bdae;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px;
+  }
+
+  #donate .chave_pix {
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    width: 500px;
+    height: 40px;
+    border: 2px #333;  
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;           
+
+  }
+  .chave_pix i {
+    font-size: 19px;      /* Tamanho do ícone */
+    color: #00bdae;       /* Ícone em verde */
+    cursor: pointer;      /* Muda o cursor ao passar */
+    transition: transform 0.3s ease, color 0.3s ease; /* Efeito ao interagir */
+  }
+
+  .chave_pix i:hover {
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+    color: #00bdae;        /* Verde mais escuro no hover */
+  }
+
+  .mensagem {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+/*
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+*/
+  #donate .chave_pix h2 {
+    padding: 20px;
+    color: #333;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+
+  }
+
+
+
+
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .navbar ul {
+      flex-direction: column;
+    }
+
+    .navbar li {
+      margin: 10px 0;
+    }
+
+    #home h1 {
+      font-size: 2.5em;
+    }
+
+    #home p {
+      font-size: 1em;
+    }
+
+    .gallery .image-grid {
+      flex-direction: column;
+      gap: 15px;
+
+    }
+
+    .thumbnail {
+      width: 50%;
+    }
+
+    .thumbnail:hover {
+      width: 60%;
+    }
+
+    #about h2, #features h2, #privacy h2, #donate h2 {
+      font-size: 2em;
+    }
+
+    #about p, #features ul li, #privacy p, #donate p {
+      font-size: 1em;
+    }
+  }

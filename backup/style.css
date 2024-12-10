@@ -1,0 +1,78 @@
+/* Estilo básico */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6e6; /* fundo claro, tons de vermelho suave */
+}
+
+header {
+  background-color: #d32f2f; /* vermelho mais forte para o cabeçalho */
+  padding: 15px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+h1, h2 {
+  color: #c62828; /* um vermelho vibrante */
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+}
+
+#intro {
+  background-color: #fff; /* fundo branco para contraste */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #c62828; /* botão com um vermelho vibrante */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #d32f2f; /* fundo vermelho para o rodapé */
+  color: white;
+}
+
+#gallery img {
+  width: 300px;
+  margin: 10px;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

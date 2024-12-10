@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Navbar (fixa no topo) -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Início</a></li>
+      <li><a href="#gallery">Galeria</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#features">Funcionalidades</a></li>
+      <li><a href="privacy.html">Política de Privacidade</a></li>
+      <li><a href="#donate">Doação</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="container">
+      <div class="content">
+        <h1>Bem-vindo ao Lista de Compras App</h1>
+        <p>Organize suas compras de maneira prática e eficiente com o nosso aplicativo! Economize tempo e dinheiro ao planejar suas compras de forma simples e rápida.</p>
+        <p>Adicione itens, calcule os precos, e visualize tudo de maneira clara e intuitiva.</p>
+        <img src="/imagens/AppIcons (2)/playstore.png" alt="Ícone do App" class="app-icon">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>Sobre o Lista de Compras App</h2>
+      <p>O <strong>Lista de Compras App</strong> foi desenvolvido com o objetivo de ajudar você a planejar suas compras de maneira mais eficiente. Com ele, você pode adicionar itens à sua lista, inserir quantidades e preços, e o aplicativo automaticamente calcula o subtotal e o total da compra.</p>
+      <p>Seja para uma ida ao supermercado ou para compras online, o app é ideal para quem busca praticidade no dia a dia!</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Galeria do App</h2>
+      <p>Confira algumas imagens do app em ação e veja como ele pode facilitar o seu dia a dia!</p>
+      <div class="image-grid">
+        <div class="thumbnail" onmouseover="highlightImage(0)" onclick="expandImage(0)">
+          <img src="imagens/1.png" alt="Tela principal do app">
+        </div>
+        <div class="thumbnail" onmouseover="highlightImage(1)" onclick="expandImage(1)">
+          <img src="imagens/2.png" alt="Adicionando um item">
+        </div>
+        <div class="thumbnail" onmouseover="highlightImage(2)" onclick="expandImage(2)">
+          <img src="imagens/3.png" alt="Calculando totais">
+        </div>
+        <div class="thumbnail" onmouseover="highlightImage(3)" onclick="expandImage(3)">
+          <img src="imagens/4.png" alt="Interface do usuário">
+        </div>
+        <div class="thumbnail" onmouseover="highlightImage(4)" onclick="expandImage(4)">
+          <img src="imagens/5.png" alt="Visualização do total da compra">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+  </div>
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container">
+      <h2>Funcionalidades Incríveis</h2>
+      <p>O <strong>Lista de Compras App</strong> possui diversas funcionalidades que tornam a sua experiência de compra mais fácil e organizada:</p>
+      <ul>
+        <li><strong>Adicionar produtos:</strong> Insira nome, quantidade e preço dos itens da sua lista.</li>
+        <li><strong>Cálculo automático:</strong> O app calcula automaticamente o subtotal de cada item e o total da compra, ajudando você a controlar melhor o orçamento.</li>
+        <li><strong>Interface intuitiva:</strong> Uma interface simples e agradável, ideal para quem busca praticidade e agilidade.</li>
+        <li><strong>Armazenamento local:</strong> Suas listas ficam salvas no dispositivo, permitindo que você acesse e edite quando precisar.</li>
+        <li><strong>Fácil de usar:</strong> Com apenas alguns toques, você tem controle total das suas compras!</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Donate Section -->
+  <section id="donate">
+    <div class="container">
+      <h2>Ajude-nos a Melhorar</h2>
+      <p>Se você aprecia o nosso app e deseja contribuir para que possamos continuar melhorando e adicionando novas funcionalidades, considere fazer uma doação. Sua contribuição será fundamental para nos ajudar a oferecer cada vez mais recursos e uma experiência ainda mais completa!</p>
+      <!--<button>Doar Agora</button> -->
+      <h3>Chave Pix</h3>
+    </div>
+
+    <div class="chave_pix">
+      <h2 id="chave_pix">
+        0590b57d-da46-4db0-a079-386ade64b4c1
+      </h2>
+      <i class="bi bi-copy" onclick="copiarPix()"></i>
+    </div>
+    <div class="mensagem" id="mensagem">Chave Pix Copiada para Área de Transferência</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Lista de Compras App. Todos os direitos reservados. | <a href="privacy.html">Política de Privacidade</a></p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
